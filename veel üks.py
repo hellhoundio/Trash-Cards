@@ -67,6 +67,8 @@ paus_aitab = pg.image.load("paus_aitab copy.JPG")
 paus_aitab = pg.transform.scale(paus_aitab,lehtede_dimensioonid)
 paus_tanud = pg.image.load("paus_tanud copy.JPG")
 paus_tanud = pg.transform.scale(paus_tanud,lehtede_dimensioonid)
+mitmes_nadal = pg.image.load("nadal.JPG")
+mitmes_nadal = pg.transform.scale(mitmes_nadal,lehtede_dimensioonid)
 
 haircut_angry = pg.image.load("haircut_angry copy.png")
 haircut_angry = pg.transform.scale(haircut_angry,tegelase_dimensioonid)
@@ -258,7 +260,7 @@ def paus():
                     elif paus_valik == 3 or paus_valik == -2:
                         pg.quit()
                         sys.exit()
-def render_multi_line(text, x, y, fsize,varv): #tnx https://stackoverflow.com/users/7467288/justincai
+def render_multi_line(text, x, y, fsize, varv): #tnx https://stackoverflow.com/users/7467288/justincai
     lines = text.splitlines()
     for i, l in enumerate(lines):
         ekraan.blit(tekst_font.render(l, 0, varv), (x, y + fsize * i))
@@ -275,7 +277,6 @@ def jutt(raakimine,tuju,koht):
     ekraan.blit(koha_tekst, (610, 10))
     nadala_tekst = tehniline_font.render(str(nadal), True, "black")
     ekraan.blit(nadala_tekst, (325, 15))
-
 
     mitmes_taht = 0
     paus_olek = False
@@ -433,8 +434,8 @@ def pilt(kusimus, tuju, valikud, koht):
                 elif ev.key == pg.K_RETURN:
                     if valik == len(valikud) or valik == 2*len(valikud):
                         paus()
-                    else:
-                        pilt_jookseb= False
+                    elif otsus != 0:
+                        pilt_jookseb = False
 def sinu_jutt(raakimine):
     global hetkene_tuju
     global hetkene_tuju
@@ -504,10 +505,10 @@ def mang():
     nadal = 1
     usaldus = 1
     while mangib:
-        uks_nadal = True
         m.floor(usaldus)
         #nädal 1
         if nadal == 1:
+            uks_nadal = True
             if usaldus == 1:
                 while uks_nadal:
                     #\n
@@ -538,15 +539,106 @@ def mang():
                     sinu_jutt("ehk siis, mina pean\nainult panema selle tüübi\nmidagi proovima ja ma\nsaan endale uue sõiduki?")
                     jutt("justament.",pop_norm,"park")
                     sinu_jutt("miks sa sellise väga\nkallutatud ettepanekuga\nüldse lagedale tulid?\nmida sina sellest saad?")
-                    pilt("no see on pikem jutt juba.",pop_norm,["küsi täpsemalt","jäta rahule"],"park")
+
+                    jutt("no see on juba pikem jutt.\nma mõni teine kord\npajatan.",pop_norm,"park")
+                    pilt("aga kuule... kas sa oled\nsiis nõus sellega?",pop_curious,["jah","ei"],"park")
                     if otsus == 1:
-                        print("lahe siis ju")
+                        sinu_jutt("tead mis. ma võtan vastu\nsinu väljakutse. mulle tuleb\nplus üks mootoratas")
+                        sinu_jutt("ja sulle üks ära moositud\nkuid kogenud nooruk.")
+                        jutt("imeline. lihtsalt imeline.",pop_happy,"park")
+                        jutt("eks ma soovin sulle siis\nkivi kotti, sõna otseses\nmõttes.",pop_happy,"park")
+                        sinu_jutt("nagu mul oleks seda\nõnne vaja")
+                        jutt("muiugi on. kuidas muidu\nsa eesmärki täidad",pop_happy,"park")
+                        jutt("kuid nüüd,\nhüvasti mu kallis sõber\nkohtume veel teisesgi elus",pop_norm,"park")
+                        sinu_jutt("kohtumiseni!")
                     elif otsus == 2:
-                        print("kartul")
-                    #     test test test test test t
+                        sinu_jutt("see...see ei tundu olevat\nväga mõistlik. mängida nii\nteise inimesega.")
+                        jutt("misasja?",pop_sad,"park")
+                        jutt("no see on pettumust valmistav\naga eks see on sinu otsus\nikkagi.",pop_norm,"park")
+                        sinu_jutt("on jah minu otsustada\nja mina otsustan et see\nei ole okei.")
+                        jutt("ei ei ega ma ei hakka\npeale ka midagi suruma.\nlihtsalt oli idee.",pop_norm,"park")
+                        sinu_jutt("noh ära suru siis. ")
+                        jutt("ei surugi. noh siis kihlvedu\njääb katki. ja edasi ei\nsaa mängida seda mängu",pop_norm,"park")
+                        jutt("sest siin mängus on vaja\net sa räägiksid selle teise\ntegelasega. aga aitüma mängimast\nja nüüd te siis teate mida teha\nkui tuleb taas valik",pop_norm,"park")
+                        mangib = False
+                        uks_nadal = False
+                        break
+                    ekraan.blit(mitmes_nadal, (0, 0))
+                    nadala_tekst = tehniline_font.render(str(nadal), True, "white")
+                    ekraan.blit(nadala_tekst, (400, 300))
+                    pg.display.update()
+                    pg.time.wait(3000)
+                    jutt(" ",norm_mus,"kool")
+                    sinu_jutt("hei!")
+                    pilt("..?",norm_scared,["küsi muusika kohta","tutvusta ennast"],"kool")
+                    if otsus == 1:
+                        sinu_jutt("kuule aga mida sa siin\nkuulad?")
+                        jutt("mitte midagi erilist.\nlihtsalt ´vennaskonna' vanu\nlugusid",norm_norm,"kool")
+                        sinu_jutt("või kohe nii. kas sul\non ka mõni lemmik laul ka\nnende poolt?")
+                        jutt("ma ei ütleks nii. kui just...",norm_norm,"kool")
+                        sinu_jutt("kui just?")
+                        pilt("mulle väga meeldb nende\nversioon sellest krokodill\nGena laulust",norm_norm,["krokodill gena?","laul meeldib","laul ei meeldi"],"kool")
+                        if otsus == 1:
+                            sinu_jutt("mis asi on krokodill Gena?")
+                            jutt("..",norm_curious,"kool")
+                            jutt("kas sa oled kuulnud midagi\npotsatajast?",norm_norm,"kool")
+                            sinu_jutt("kus sa nüüd sellega.\nei ole isegi. mis see\nsiis on?")
+                            jutt("üks väga armas\nnõukogudeaegne multikas, ma\nsoovitan sull sellega\ntutvuda. tõeliselt nostalgiline",norm_norm,"kool")
+                            sinu_jutt("kui sa seda nii\npropageerid siis vast peab jah")
+                        if otsus == 2:
+                            sinu_jutt("oh vot see on üks\nkorralik laul ikka. ei\nei mulle ka väga meeldib\nsee.")
+                            jutt("väga lahe. mulle endale\non ka see laul meeltmööda\nmeenutab mulle lihtsamaid\naegu",norm_happy,"kool")
+                            sinu_jutt("kas siis nõukogudeajad\nolid lihtsamad ajad?")
+                            jutt("ah ei mitte nii\nrohkem nagu lapsepõlv ja-",norm_norm,"kool")
+                            jutt("see on lihtalt\neriline laul mulle.",norm_norm,"kool")
+                            usaldus += 0.5
+                        if otsus == 3:
+                            sinu_jutt("hm. vaat nii lahe kui\nsee multikas ka polnud,\nmulle kunagi kuidagi see\nlaul ei istunud.")
+                            sinu_jutt("meenutab neid vanu aegu.\nja kõike mis sellega kaasnes")
+                            jutt("mnja. seda see teeb. kuid\nmulle just meenutab see\nlaul selle aja lihtsust.",norm_happy,"kool")
+                            jutt("muidugi ma ei ütle, et need\nvanad ajad oled just head\nkuid mälestused sellest\najaperioodist tunduvad kuidagi...",norm_norm,"kool")
+                            jutt("...lihtsad.",norm_norm,"kool")
+                            sinu_jutt("eks kõik mälestused ole\nsellised. kõige lihtsamad\nversioonid päris tegevustest.")
+                            sinu_jutt("vaena aju muud moodi ei\njõuaks neid ju hoiustada")
+                    elif otsus == 2:
+                        sinu_jutt("nii et...")
+                        sinu_jutt("tere!")
+                        jutt("tere?",norm_scared,"kool")
+                        sinu_jutt("tead mis, ma pole pea\nüldse sinuga rääkinud\nkõikide meie jagatud\nkooliaastate vältel.")
+                        sinu_jutt("niisiis täna ma lõhun selle\npikaajalise traditsiooni ja\nütlen sullegi tere")
+                        jutt("miks just praegu? miks\njust nüüd?",norm_scared,"kool")
+                        sinu_jutt("mis muu päev kui mitte\ntäna? tuli tuju ja \nvõttis kätte")
+                    jutt("kuule. nii vägagi kui\nma seda vestlust ei\nnaudiks, ma pean nüüd\ntööd edasi tegema",norm_norm,"kool")
+                    sinu_jutt("segan ma sind siis nii väga?")
+                    jutt("mitte just seda...",norm_scared,"kool")
+                    jutt("kuid harjumatu on et\nsinusugune minuga rääkima\nhakkas",norm_norm,"kool")
+                    sinu_jutt("harjumatu...")
+                    pilt("...",norm_norm,["reageeri solvunult","lohuta"],"kool")
+                    if otsus == 1:
+                        sinu_jutt("või kohe minusugused?")
+                        jutt("...",norm_scared,"kool")
+                        sinu_jutt("minusugused ehk siis?")
+                        jutt("sellised, kes julgevad\nastuda igale võõrale ligi\nja alustada nendega vestlust",norm_norm,"kool")
+                        sinu_jutt("arusaadav. arusaadav tõepoolest")
+                    elif otsus == 2:
+                        sinu_jutt("a.. ma vabandan, et\nma olen sulle sellise ilme\njätnud.")
+                        jutt("ah ei ega see polegi\nmidagi mida sa saad muuta.\nsee on lihtsalt kuidas sa mulle\npaistad",norm_norm,"kool")
+                        sinu_jutt("aga siiski, tahaksin\nseda muuta.")
+                        jutt(" ",norm_happy,"kool")
+                    #      test test test test test t
+                    nadal += 1
+                    uks_nadal = False
 
-
-        #nädal 2
+        elif nadal == 2:
+            ekraan.blit(mitmes_nadal, (0, 0))
+            nadala_tekst = tehniline_font.render(str(nadal), True, "white")
+            ekraan.blit(nadala_tekst, (400, 300))
+            pg.display.update()
+            pg.time.wait(3000)
+            uks_nadal = True
+            if usaldus == 1:
+                while uks_nadal:
+                    pilt("ärka üles",norm_angry,["ei","ei","ei"],"universum")
 
 
 
