@@ -36,106 +36,106 @@ tekst_font = pg.font.SysFont('Courier New', 20)
 
 #pilt = pg.image.load("giphy.gif")
 #pilt = pg.transform.scale(pilt,lehtede_dimensioonid)
-menuu_algne = pg.image.load("menuu_algne copy.JPG")
+menuu_algne = pg.image.load("pildid/menuu_algne copy.JPG")
 menuu_algne = pg.transform.scale(menuu_algne,lehtede_dimensioonid)
-menuu_alustame_mangu = pg.image.load("menuu_alustame_mangu copy.JPG")
+menuu_alustame_mangu = pg.image.load("pildid/menuu_alustame_mangu copy.JPG")
 menuu_alustame_mangu = pg.transform.scale(menuu_alustame_mangu,lehtede_dimensioonid)
-menuu_kuidas_mang = pg.image.load("menuu_kuidas_mang copy.JPG")
+menuu_kuidas_mang = pg.image.load("pildid/menuu_kuidas_mang copy.JPG")
 menuu_kuidas_mang = pg.transform.scale(menuu_kuidas_mang,lehtede_dimensioonid)
-menuu_aitab_kah = pg.image.load("menuu_aitab_kah copy.JPG")
+menuu_aitab_kah = pg.image.load("pildid/menuu_aitab_kah copy.JPG")
 menuu_aitab_kah = pg.transform.scale(menuu_aitab_kah,lehtede_dimensioonid)
-menuu_kreditid = pg.image.load("menuu_kreditid copy.JPG")
+menuu_kreditid = pg.image.load("pildid/menuu_kreditid copy.JPG")
 menuu_kreditid = pg.transform.scale(menuu_kreditid,lehtede_dimensioonid)
-kuidas_algne = pg.image.load("kuidas_algne copy.JPG")
+kuidas_algne = pg.image.load("pildid/kuidas_algne copy.JPG")
 kuidas_algne = pg.transform.scale(kuidas_algne,lehtede_dimensioonid)
-kuidas_tagasi = pg.image.load("kuidas_tagasi copy.JPG")
+kuidas_tagasi = pg.image.load("pildid/kuidas_tagasi copy.JPG")
 kuidas_tagasi = pg.transform.scale(kuidas_tagasi,lehtede_dimensioonid)
-alguses_kuidas = pg.image.load("alguses_kuidas copy.jpg")
+alguses_kuidas = pg.image.load("pildid/alguses_kuidas copy.jpg")
 alguses_kuidas = pg.transform.scale(alguses_kuidas,lehtede_dimensioonid)
 
-layout = pg.image.load("layout_valitud copy.PNG")
+layout = pg.image.load("pildid/layout_valitud copy.PNG")
 layout = pg.transform.scale(layout,lehtede_dimensioonid)
-layout_valitud = pg.image.load("layout copy.PNG")
+layout_valitud = pg.image.load("pildid/layout copy.PNG")
 layout_valitud = pg.transform.scale(layout_valitud,lehtede_dimensioonid)
-paus_algus = pg.image.load("paus copy.JPG")
+paus_algus = pg.image.load("pildid/paus copy.JPG")
 paus_algus = pg.transform.scale(paus_algus,lehtede_dimensioonid)
-paus_tagasi = pg.image.load("paus_valitud copy.JPG")
+paus_tagasi = pg.image.load("pildid/paus_valitud copy.JPG")
 paus_tagasi = pg.transform.scale(paus_tagasi,lehtede_dimensioonid)
-paus_kuidas = pg.image.load("paus_kuidas copy.JPG")
+paus_kuidas = pg.image.load("pildid/paus_kuidas copy.JPG")
 paus_kuidas = pg.transform.scale(paus_kuidas,lehtede_dimensioonid)
-paus_aitab = pg.image.load("paus_aitab copy.JPG")
+paus_aitab = pg.image.load("pildid/paus_aitab copy.JPG")
 paus_aitab = pg.transform.scale(paus_aitab,lehtede_dimensioonid)
-paus_tanud = pg.image.load("paus_tanud copy.JPG")
+paus_tanud = pg.image.load("pildid/paus_tanud copy.JPG")
 paus_tanud = pg.transform.scale(paus_tanud,lehtede_dimensioonid)
-mitmes_nadal = pg.image.load("nadal.JPG")
+mitmes_nadal = pg.image.load("pildid/nadal.JPG")
 mitmes_nadal = pg.transform.scale(mitmes_nadal,lehtede_dimensioonid)
 
-haircut_angry = pg.image.load("haircut_angry copy.png")
+haircut_angry = pg.image.load("pildid/haircut_angry copy.png")
 haircut_angry = pg.transform.scale(haircut_angry,tegelase_dimensioonid)
-haircut_angry_home = pg.image.load("haircut_angry_home copy.png")
+haircut_angry_home = pg.image.load("pildid/haircut_angry_home copy.png")
 haircut_angry_home = pg.transform.scale(haircut_angry_home,tegelase_dimensioonid)
-haircut_curious = pg.image.load("haircut_curious copy.png")
+haircut_curious = pg.image.load("pildid/haircut_curious copy.png")
 haircut_curious = pg.transform.scale(haircut_curious,tegelase_dimensioonid)
-haircut_curious_home = pg.image.load("haircut_curious_home copy.png")
+haircut_curious_home = pg.image.load("pildid/haircut_curious_home copy.png")
 haircut_curious_home = pg.transform.scale(haircut_curious_home,tegelase_dimensioonid)
-haircut_happy = pg.image.load("haircut_happy copy.png")
+haircut_happy = pg.image.load("pildid/haircut_happy copy.png")
 haircut_happy = pg.transform.scale(haircut_happy,tegelase_dimensioonid)
-haircut_happy_home = pg.image.load("haircut_happy_home copy.png")
+haircut_happy_home = pg.image.load("pildid/haircut_happy_home copy.png")
 haircut_happy_home = pg.transform.scale(haircut_happy_home,tegelase_dimensioonid)
-haircut_mus = pg.image.load("haircut_mus copy.png")
+haircut_mus = pg.image.load("pildid/haircut_mus copy.png")
 haircut_mus = pg.transform.scale(haircut_mus,tegelase_dimensioonid)
-haircut_norm_home = pg.image.load("haircut_norm_home copy.png")
+haircut_norm_home = pg.image.load("pildid/haircut_norm_home copy.png")
 haircut_norm_home = pg.transform.scale(haircut_norm_home,tegelase_dimensioonid)
-haircut_sad = pg.image.load("haircut_sad copy.png")
+haircut_sad = pg.image.load("pildid/haircut_sad copy.png")
 haircut_sad = pg.transform.scale(haircut_sad,tegelase_dimensioonid)
-haircut_sad_home = pg.image.load("haircut_sad_home copy.png")
+haircut_sad_home = pg.image.load("pildid/haircut_sad_home copy.png")
 haircut_sad_home = pg.transform.scale(haircut_sad_home,tegelase_dimensioonid)
-haircut_scared = pg.image.load("haircut_scared copy.png")
+haircut_scared = pg.image.load("pildid/haircut_scared copy.png")
 haircut_scared = pg.transform.scale(haircut_scared,tegelase_dimensioonid)
-haircut_scared_home = pg.image.load("haircut_scared_home copy.png")
+haircut_scared_home = pg.image.load("pildid/haircut_scared_home copy.png")
 haircut_scared_home = pg.transform.scale(haircut_scared_home,tegelase_dimensioonid)
-hoodie_angry = pg.image.load("hoodie_angry copy.png")
+hoodie_angry = pg.image.load("pildid/hoodie_angry copy.png")
 hoodie_angry = pg.transform.scale(hoodie_angry,tegelase_dimensioonid)
-hoodie_curious = pg.image.load("hoodie_curious copy.png")
+hoodie_curious = pg.image.load("pildid/hoodie_curious copy.png")
 hoodie_curious = pg.transform.scale(hoodie_curious,tegelase_dimensioonid)
-hoodie_happy = pg.image.load("hoodie_happy copy.png")
+hoodie_happy = pg.image.load("pildid/hoodie_happy copy.png")
 hoodie_happy = pg.transform.scale(hoodie_happy,tegelase_dimensioonid)
-hoodie_mus = pg.image.load("hoodie_mus copy.png")
+hoodie_mus = pg.image.load("pildid/hoodie_mus copy.png")
 hoodie_mus = pg.transform.scale(hoodie_mus,tegelase_dimensioonid)
-hoodie_norm = pg.image.load("hoodie_norm copy.png")
+hoodie_norm = pg.image.load("pildid/hoodie_norm copy.png")
 hoodie_norm = pg.transform.scale(hoodie_norm,tegelase_dimensioonid)
-hoodie_sad = pg.image.load("hoodie_sad copy.png")
+hoodie_sad = pg.image.load("pildid/hoodie_sad copy.png")
 hoodie_sad = pg.transform.scale(hoodie_sad,tegelase_dimensioonid)
-hoodie_scared = pg.image.load("hoodie_scared copy.png")
+hoodie_scared = pg.image.load("pildid/hoodie_scared copy.png")
 hoodie_scared = pg.transform.scale(hoodie_scared,tegelase_dimensioonid)
-hoodie_work = pg.image.load("hoodie_work copy.png")
+hoodie_work = pg.image.load("pildid/hoodie_work copy.png")
 hoodie_work = pg.transform.scale(hoodie_work,tegelase_dimensioonid)
-norm_angry = pg.image.load("norm_angry copy.png")
+norm_angry = pg.image.load("pildid/norm_angry copy.png")
 norm_angry = pg.transform.scale(norm_angry,tegelase_dimensioonid)
-norm_curious = pg.image.load("norm_curious copy.png")
+norm_curious = pg.image.load("pildid/norm_curious copy.png")
 norm_curious = pg.transform.scale(norm_curious,tegelase_dimensioonid)
-norm_happy = pg.image.load("norm_happy copy.png")
+norm_happy = pg.image.load("pildid/norm_happy copy.png")
 norm_happy = pg.transform.scale(norm_happy,tegelase_dimensioonid)
-norm_mus = pg.image.load("norm_mus copy.png")
+norm_mus = pg.image.load("pildid/norm_mus copy.png")
 norm_mus = pg.transform.scale(norm_mus,tegelase_dimensioonid)
-norm_norm = pg.image.load("norm_norm copy.png")
+norm_norm = pg.image.load("pildid/norm_norm copy.png")
 norm_norm = pg.transform.scale(norm_norm,tegelase_dimensioonid)
-norm_sad = pg.image.load("norm_sad copy.png")
+norm_sad = pg.image.load("pildid/norm_sad copy.png")
 norm_sad = pg.transform.scale(norm_sad,tegelase_dimensioonid)
-norm_scared = pg.image.load("norm_scared copy.png")
+norm_scared = pg.image.load("pildid/norm_scared copy.png")
 norm_scared = pg.transform.scale(norm_scared,tegelase_dimensioonid)
-norm_work = pg.image.load("norm_work copy.png")
+norm_work = pg.image.load("pildid/norm_work copy.png")
 norm_work = pg.transform.scale(norm_work,tegelase_dimensioonid)
-norm_write = pg.image.load("norm_write copy.png")
+norm_write = pg.image.load("pildid/norm_write copy.png")
 norm_write = pg.transform.scale(norm_write,tegelase_dimensioonid)
 
-pop_curious = pg.image.load("pop_curious.png")
+pop_curious = pg.image.load("pildid/pop_curious.png")
 pop_curious = pg.transform.scale(pop_curious,tegelase_dimensioonid)
-pop_happy = pg.image.load("pop_happy.png")
+pop_happy = pg.image.load("pildid/pop_happy.png")
 pop_happy = pg.transform.scale(pop_happy,tegelase_dimensioonid)
-pop_norm = pg.image.load("pop_norm.png")
+pop_norm = pg.image.load("pildid/pop_norm.png")
 pop_norm = pg.transform.scale(pop_norm,tegelase_dimensioonid)
-pop_sad = pg.image.load("pop_sad.png")
+pop_sad = pg.image.load("pildid/pop_sad.png")
 pop_sad = pg.transform.scale(pop_sad,tegelase_dimensioonid)
 
 #mäng kui definitsioonid
@@ -260,10 +260,19 @@ def paus():
                     elif paus_valik == 3 or paus_valik == -2:
                         pg.quit()
                         sys.exit()
-def render_multi_line(text, x, y, fsize, varv): #tnx https://stackoverflow.com/users/7467288/justincai
-    lines = text.splitlines()
-    for i, l in enumerate(lines):
-        ekraan.blit(tekst_font.render(l, 0, varv), (x, y + fsize * i))
+def automaatne_jargmine_rida(tekst,x,y,fsuurus,varv):
+    print(tekst)
+    n = 26
+    chunks = []
+    i = 0
+    while i < len(tekst):
+        if i + n < len(tekst):
+            chunks.append(tekst[i:i + n])
+        else:
+            chunks.append(tekst[i:len(tekst)])
+        i += n
+    for i, l in enumerate(chunks):
+        ekraan.blit(tekst_font.render(l, False, varv), (x, y + fsuurus * i))
 def jutt(raakimine,tuju,koht):
     global hetkene_tuju
     global hetkene_koht
@@ -300,8 +309,8 @@ def jutt(raakimine,tuju,koht):
             nadala_tekst = tehniline_font.render(str(nadal), True, "black")
             ekraan.blit(nadala_tekst, (325, 15))
         mitmes_taht += 1
-        render_multi_line(raakimine[:mitmes_taht], 55, 150, 30, "black")
-        time.sleep(0.02)
+        automaatne_jargmine_rida(raakimine[:mitmes_taht], 55, 150, 30, "black")
+        time.sleep(0.01)
         for ev in pg.event.get():
             if ev.type == pg.QUIT:
                 pg.quit()
@@ -313,7 +322,7 @@ def jutt(raakimine,tuju,koht):
                 elif ev.key == pg.K_RETURN:
                     if paus_olek == True:
                         paus()
-                    render_multi_line(raakimine, 55, 150, 30, "black")
+                    automaatne_jargmine_rida(raakimine, 55, 150, 30, "black")
                     mitmes_taht = len(raakimine)
                 if ev.key == pg.K_DOWN:
                     if paus_olek == False:
@@ -337,7 +346,7 @@ def jutt(raakimine,tuju,koht):
             ekraan.blit(koha_tekst, (610, 10))
             nadala_tekst = tehniline_font.render(str(nadal), True, "black")
             ekraan.blit(nadala_tekst, (325, 15))
-            render_multi_line(raakimine, 55, 150, 30, "black")
+            automaatne_jargmine_rida(raakimine, 55, 150, 30, "black")
         elif paus_olek == False:
             ekraan.fill("light gray")
             ekraan.blit(tuju, (400, 100))
@@ -346,7 +355,7 @@ def jutt(raakimine,tuju,koht):
             ekraan.blit(koha_tekst, (610, 10))
             nadala_tekst = tehniline_font.render(str(nadal), True, "black")
             ekraan.blit(nadala_tekst, (325, 15))
-            render_multi_line(raakimine, 55, 150, 30, "black")
+            automaatne_jargmine_rida(raakimine, 55, 150, 30, "black")
         for ev in pg.event.get():
             if ev.type == pg.QUIT:
                 pg.quit()
@@ -396,7 +405,7 @@ def pilt(kusimus, tuju, valikud, koht):
         nadala_tekst = tehniline_font.render(str(nadal), True, "black")
         ekraan.blit(nadala_tekst, (325, 15))
         #tekst
-        render_multi_line(kusimus, 55,150,30,"black")
+        automaatne_jargmine_rida(kusimus, 55,150,30,"black")
         for x in range(len(valikud)):
             mitmes = x+1
             valitud_valik = "black"
@@ -412,7 +421,7 @@ def pilt(kusimus, tuju, valikud, koht):
                 if mitmes == 3:
                     valitud_valik = hall
                     otsus = 3
-            render_multi_line(str(mitmes)+")"+valikud[x],50,380+x*60,30,valitud_valik)
+            automaatne_jargmine_rida(str(mitmes)+")"+valikud[x],50,380+x*60,30,valitud_valik)
         pg.display.update()
         #vajutused
         for ev in pg.event.get():
@@ -461,7 +470,7 @@ def sinu_jutt(raakimine):
             nadala_tekst = tehniline_font.render(str(nadal), True, "black")
             ekraan.blit(nadala_tekst, (325, 15))
         mitmes_taht += 1
-        render_multi_line(raakimine[:mitmes_taht], 55, 380, 30, "black")
+        automaatne_jargmine_rida(raakimine[:mitmes_taht], 55, 380, 30, "black")
         time.sleep(0.02)
         for ev in pg.event.get():
             if ev.type == pg.QUIT:
@@ -474,7 +483,7 @@ def sinu_jutt(raakimine):
                 elif ev.key == pg.K_RETURN:
                     if paus_olek == True:
                         paus()
-                    render_multi_line(raakimine, 55, 380, 30, "black")
+                    automaatne_jargmine_rida(raakimine, 55, 380, 30, "black")
                     mitmes_taht = len(raakimine)
                 if ev.key == pg.K_DOWN:
                     if paus_olek == False:
@@ -499,7 +508,6 @@ def sinu_jutt(raakimine):
                     sys.exit()
                 elif ev.key == pg.K_RETURN:
                     jutt_jookseb = False
-
 def mang():
     mangib = True
     nadal = 1
@@ -517,15 +525,15 @@ def mang():
 
                     jutt("ou lükka friikat",pop_norm,"park")
                     sinu_jutt("käi persse minu omad")
-                    jutt("ja siis? nagu mind\nhuvitaks",pop_curious,"park")
-                    sinu_jutt("no eks sa siis võta\nkui nii väga soovid")
+                    jutt("ja siis? nagu mind huvitaks",pop_curious,"park")
+                    sinu_jutt("no eks sa siis võta kui nii väga soovid")
                     jutt("võtangi noh.",pop_norm,"park")
                     jutt("...",pop_curious,"park")
                     sinu_jutt("... mida sa veel tahad?")
-                    jutt("kas sa oled juba mõelnud\nsellele pakkumisele?",pop_curious,"park")
-                    sinu_jutt("pakkumine? mis ajast\noled sina mulle üldse\nmidagi niisama pakkunud?")
-                    jutt("ei lollakas. mitte selles\nmõttes. rohkem nagu\nsee...",pop_norm,"park")
-                    jutt("see väljakutse, kui seda\nvõib nii kutsuda.\nsee asi.",pop_norm,"park")
+                    jutt("kas sa oled juba mõelnud sellele pakkumisele?",pop_curious,"park")
+                    sinu_jutt("pakkumine? mis ajast oled sina mulle üldse midagi niisama pakkunud?")
+                    jutt("ei lollakas. mitte selles mõttes. rohkem nagu see...",pop_norm,"park")
+                    jutt("see väljakutse, kui seda võib nii kutsuda. see asi.",pop_norm,"park")
                     sinu_jutt("palun aga värseknda minu\nmälu, sest ma tõepoolest\nei tea millest sa räägid")
                     jutt("noo...",pop_norm,"park")
                     jutt("okei nii. ma vean sinuga\nkihla et sa ei suuda\nveenda seda venda seal\nendaga aineid tarbima.",pop_norm,"park")
@@ -639,14 +647,3 @@ def mang():
             if usaldus == 1:
                 while uks_nadal:
                     pilt("ärka üles",norm_angry,["ei","ei","ei"],"universum")
-
-
-
-
-
-#mäng
-mang_jookseb = True
-while mang_jookseb:
-    menuu()
-    mang()
-    break
