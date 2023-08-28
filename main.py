@@ -1,4 +1,4 @@
-import mangu_funktsioonid as mf
+import mäng as mf
 
 mang_jookseb = True
 while mang_jookseb:
