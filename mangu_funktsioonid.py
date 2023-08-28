@@ -2,6 +2,7 @@ import pygame as pg
 import sys
 import math as m
 import time
+from pilt import *
 
 #tehnilised asjad
 pg.init()
@@ -36,16 +37,7 @@ tekst_font = pg.font.SysFont('Courier New', 20)
 
 #pilt = pg.image.load("giphy.gif")
 #pilt = pg.transform.scale(pilt,lehtede_dimensioonid)
-menuu_algne = pg.image.load("pildid/menuu_algne copy.JPG")
-menuu_algne = pg.transform.scale(menuu_algne,lehtede_dimensioonid)
-menuu_alustame_mangu = pg.image.load("pildid/menuu_alustame_mangu copy.JPG")
-menuu_alustame_mangu = pg.transform.scale(menuu_alustame_mangu,lehtede_dimensioonid)
-menuu_kuidas_mang = pg.image.load("pildid/menuu_kuidas_mang copy.JPG")
-menuu_kuidas_mang = pg.transform.scale(menuu_kuidas_mang,lehtede_dimensioonid)
-menuu_aitab_kah = pg.image.load("pildid/menuu_aitab_kah copy.JPG")
-menuu_aitab_kah = pg.transform.scale(menuu_aitab_kah,lehtede_dimensioonid)
-menuu_kreditid = pg.image.load("pildid/menuu_kreditid copy.JPG")
-menuu_kreditid = pg.transform.scale(menuu_kreditid,lehtede_dimensioonid)
+
 kuidas_algne = pg.image.load("pildid/kuidas_algne copy.JPG")
 kuidas_algne = pg.transform.scale(kuidas_algne,lehtede_dimensioonid)
 kuidas_tagasi = pg.image.load("pildid/kuidas_tagasi copy.JPG")
@@ -261,7 +253,6 @@ def paus():
                         pg.quit()
                         sys.exit()
 def automaatne_jargmine_rida(tekst,x,y,fsuurus,varv):
-    print(tekst)
     n = 26
     chunks = []
     i = 0
@@ -273,17 +264,14 @@ def automaatne_jargmine_rida(tekst,x,y,fsuurus,varv):
         i += n
     for i, l in enumerate(chunks):
         ekraan.blit(tekst_font.render(l, False, varv), (x, y + fsuurus * i))
-def jutt(raakimine,tuju,koht):
+def jutt(raakimine,tuju):
     global hetkene_tuju
     global hetkene_koht
     hetkene_tuju = tuju
-    hetkene_koht = koht
 
     ekraan.fill("light gray")
     ekraan.blit(tuju, (400, 100))
     ekraan.blit(layout, (0, 0))
-    koha_tekst = tehniline_font.render(koht, True, "black")
-    ekraan.blit(koha_tekst, (610, 10))
     nadala_tekst = tehniline_font.render(str(nadal), True, "black")
     ekraan.blit(nadala_tekst, (325, 15))
 
@@ -296,16 +284,12 @@ def jutt(raakimine,tuju,koht):
             ekraan.fill("light gray")
             ekraan.blit(tuju, (400, 100))
             ekraan.blit(layout_valitud, (0, 0))
-            koha_tekst = tehniline_font.render(koht, True, "black")
-            ekraan.blit(koha_tekst, (610, 10))
             nadala_tekst = tehniline_font.render(str(nadal), True, "black")
             ekraan.blit(nadala_tekst, (325, 15))
         if paus_olek == False:
             ekraan.fill("light gray")
             ekraan.blit(tuju, (400, 100))
             ekraan.blit(layout, (0, 0))
-            koha_tekst = tehniline_font.render(koht, True, "black")
-            ekraan.blit(koha_tekst, (610, 10))
             nadala_tekst = tehniline_font.render(str(nadal), True, "black")
             ekraan.blit(nadala_tekst, (325, 15))
         mitmes_taht += 1
@@ -342,8 +326,6 @@ def jutt(raakimine,tuju,koht):
             ekraan.fill("light gray")
             ekraan.blit(tuju, (400, 100))
             ekraan.blit(layout_valitud, (0, 0))
-            koha_tekst = tehniline_font.render(koht, True, "black")
-            ekraan.blit(koha_tekst, (610, 10))
             nadala_tekst = tehniline_font.render(str(nadal), True, "black")
             ekraan.blit(nadala_tekst, (325, 15))
             automaatne_jargmine_rida(raakimine, 55, 150, 30, "black")
@@ -351,8 +333,6 @@ def jutt(raakimine,tuju,koht):
             ekraan.fill("light gray")
             ekraan.blit(tuju, (400, 100))
             ekraan.blit(layout, (0, 0))
-            koha_tekst = tehniline_font.render(koht, True, "black")
-            ekraan.blit(koha_tekst, (610, 10))
             nadala_tekst = tehniline_font.render(str(nadal), True, "black")
             ekraan.blit(nadala_tekst, (325, 15))
             automaatne_jargmine_rida(raakimine, 55, 150, 30, "black")
@@ -380,14 +360,12 @@ def jutt(raakimine,tuju,koht):
                     else:
                         jutt_jookseb = False
         pg.display.update()
-def pilt(kusimus, tuju, valikud, koht):
+def pilt(kusimus, tuju, valikud):
     global hetkene_tuju
-    global hetkene_koht
     global otsus
     otsus = 0
     hetkene_tuju = tuju
-    hetkene_koht = koht
-    jutt(kusimus,hetkene_tuju,hetkene_koht)
+    jutt(kusimus,hetkene_tuju)
     pilt_jookseb = True
     valik = len(valikud)+1
     while pilt_jookseb:
@@ -400,8 +378,6 @@ def pilt(kusimus, tuju, valikud, koht):
         ekraan.fill("light gray")
         ekraan.blit(tuju, (400, 100))
         ekraan.blit(paus_olek, (0, 0))
-        koha_tekst = tehniline_font.render(koht, True, "black")
-        ekraan.blit(koha_tekst, (610, 10))
         nadala_tekst = tehniline_font.render(str(nadal), True, "black")
         ekraan.blit(nadala_tekst, (325, 15))
         #tekst
@@ -457,16 +433,12 @@ def sinu_jutt(raakimine):
             ekraan.fill("light gray")
             ekraan.blit(hetkene_tuju, (400, 100))
             ekraan.blit(layout_valitud, (0, 0))
-            koha_tekst = tehniline_font.render(hetkene_koht, True, "black")
-            ekraan.blit(koha_tekst, (610, 10))
             nadala_tekst = tehniline_font.render(str(nadal), True, "black")
             ekraan.blit(nadala_tekst, (325, 15))
         if paus_olek == False:
             ekraan.fill("light gray")
             ekraan.blit(hetkene_tuju, (400, 100))
             ekraan.blit(layout, (0, 0))
-            koha_tekst = tehniline_font.render(hetkene_koht, True, "black")
-            ekraan.blit(koha_tekst, (610, 10))
             nadala_tekst = tehniline_font.render(str(nadal), True, "black")
             ekraan.blit(nadala_tekst, (325, 15))
         mitmes_taht += 1
@@ -523,11 +495,11 @@ def mang():
                     #5 row
                     #     test test test test test t
 
-                    jutt("ou lükka friikat",pop_norm,"park")
+                    jutt("ou lükka friikat",pop_norm)
                     sinu_jutt("käi persse minu omad")
-                    jutt("ja siis? nagu mind huvitaks",pop_curious,"park")
+                    jutt("ja siis? nagu mind huvitaks",pop_curious)
                     sinu_jutt("no eks sa siis võta kui nii väga soovid")
-                    jutt("võtangi noh.",pop_norm,"park")
+                    jutt("võtangi noh.",pop_norm)
                     jutt("...",pop_curious,"park")
                     sinu_jutt("... mida sa veel tahad?")
                     jutt("kas sa oled juba mõelnud sellele pakkumisele?",pop_curious,"park")
@@ -633,7 +605,6 @@ def mang():
                         jutt("ah ei ega see polegi\nmidagi mida sa saad muuta.\nsee on lihtsalt kuidas sa mulle\npaistad",norm_norm,"kool")
                         sinu_jutt("aga siiski, tahaksin\nseda muuta.")
                         jutt(" ",norm_happy,"kool")
-                    #      test test test test test t
                     nadal += 1
                     uks_nadal = False
 

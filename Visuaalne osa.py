@@ -1,5 +1,6 @@
 import pygame as pg
 import sys
+from pildid import *
 
 pg.init()
 ekraan = pg.display.set_mode((800,800))
